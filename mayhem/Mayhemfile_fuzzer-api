@@ -1,0 +1,9 @@
+project: savantenvs/tesseract
+target: fuzzer-api
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzer-api/testsuite
+cmds:
+  - cmd: /mayhem/fuzzer-api
+    libfuzzer: true
+    timeout: 10
