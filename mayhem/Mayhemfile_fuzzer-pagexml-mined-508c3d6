@@ -1,0 +1,8 @@
+project: savantenvs/tesseract
+target: fuzzer-pagexml-mined-508c3d6
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+cmds:
+  - cmd: /mayhem/fuzzer-pagexml
+    libfuzzer: true
+    timeout: 60
