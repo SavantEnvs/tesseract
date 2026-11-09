@@ -1,0 +1,10 @@
+# seed-from: https://app.mayhem.security/savantenvs/tesseract/fuzzer-api
+project: savantenvs/tesseract
+target: fuzzer-api-512x256-mined-87b0a4d
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzzer-api-512x256-mined-87b0a4d/testsuite
+cmds:
+  - cmd: /mayhem/fuzzer-api-512x256
+    libfuzzer: true
+    timeout: 10
